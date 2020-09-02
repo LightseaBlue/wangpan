@@ -1,0 +1,19 @@
+var oWrap5 = document.getElementById('wrap5');
+		var aLi5 = oWrap5.getElementsByTagName('li');
+		var aH25 = oWrap5.getElementsByTagName('h2');
+		var aBox5 = oWrap5.getElementsByTagName('div');
+
+		for (var i = 0; i < aLi5.length; i++) {
+			var iNow = 0;
+			aLi5[i].index = i;
+			aLi5[i].onmouseover = function () {
+				aH25[iNow].style.display = 'block';
+				aBox5[iNow].style.display = 'none';
+
+				aH25[this.index].style.display = 'none';
+				aBox5[this.index].style.display = 'block';
+
+				iNow = this.index;
+			};
+
+		}
